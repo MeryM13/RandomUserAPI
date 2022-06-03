@@ -1,0 +1,29 @@
+#search_form
+{
+  display: flex;
+  flex-direction: row;
+}
+
+/*h1*/
+/*{*/
+/*  background-color: darkslategrey;*/
+/*  color: aliceblue;*/
+/*}*/
+
+th
+{
+  background-color: cadetblue;
+  color: aliceblue;
+}
+
+.table_category_name
+{
+  child-align: middle;
+  background-color: powderblue;
+  font-weight: bold;
+}
+
+.user_table
+{
+  width: 90%;
+}

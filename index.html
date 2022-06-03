@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="utf-8">
+    <title>Random User</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="index.js"></script>
+  </head>
+  <body>
+  <h1>Random User Generator</h1>
+  <label>Enable customization?</label>
+  <input id="custom" type="checkbox">
+  <br>
+  <button id="clear_button">Clear form</button>
+    <form id="search_form" action="index.html" method="post">
+      <table border="1">
+        <tr>
+          <th colspan="4">Customize request (leave empty for random result):</th>
+        </tr>
+        <tr>
+          <td class="table_category_name" colspan="2">Number of results</td>
+          <td colspan="2">
+          <input id="num_results" type="number">
+          </td>
+        </tr>
+        <th colspan="4">Gender customization</th>
+        <tr>
+          <td colspan="2">
+            <span>Male</span>
+            <input id="rb_male" type="radio" name="gender">
+          </td>
+          <td colspan="2">
+            <span>Female</span>
+            <input id="rb_female" type="radio" name="gender">
+          </td>
+        </tr>
+        <th colspan="4">Password customization</th>
+        <tr></tr>
+        <td class="table_category_name" colspan="4" align="center">Password charset</td>
+        <tr>
+          <td>
+            <span>Special</span>
+            <input id="password_check_special" type="checkbox">
+          </td>
+          <td>
+            <span>Upper</span>
+            <input id="password_check_upper" type="checkbox">
+          </td>
+          <td>
+            <span>Lower</span>
+            <input id="password_check_lower" type="checkbox">
+          </td>
+          <td>
+            <span>Number</span>
+            <input id="password_check_number" type="checkbox">
+          </td>
+        </tr>
+        <td class="table_category_name" colspan="4" align="center">Password length</td>
+        <tr>
+          <td class="table_category_name" >Min length</td>
+          <td>
+            <input id="num_password_min" type="number">
+          </td>
+          <td class="table_category_name" >Max length</td>
+          <td>
+            <input id="num_password_max" type="number">
+          </td>
+        </tr>
+        <th colspan="4">Input seed</th>
+        <tr>
+          <td class="table_category_name" >Seed</td>
+          <td>
+            <input id="seed_input" type="text">
+          </td>
+          <td class="table_category_name" >Page</td>
+          <td>
+            <input id="num_page" type="number">
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4" align="center">
+            <button id="search_button" type="submit">🔎</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+    <img id="spinner" src="spinner.gif" style="display: none;">
+    <ul id="result_list"></ul>
+    <div id="error_div"></div>
+  </body>
+</html>
